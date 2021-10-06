@@ -1,0 +1,103 @@
+:root {
+  /* parata font */
+  --font-prata-h1: 50px 'Prata', serif;
+  --font-prata-h2: 35px 'Prata', serif;
+  --font-prata-h3: 28px 'Prata', serif;
+  --font-prata-h4: 20px 'Prata', serif;
+
+  /* roboto font */
+  --font-roboto-h1: bold 25px 'Roboto Condensed', sans-serif;
+  --font-roboto-h2: 19px 'Roboto Condensed', sans-serif;
+  --font-roboto-h3: bold 18px 'Roboto Condensed', sans-serif;
+  --font-roboto-h4: 18px 'Roboto Condensed', sans-serif;
+  --font-roboto-p:  16px 'Roboto Condensed', sans-serif;
+  --font-roboto-p-small:  12px 'Roboto Condensed', sans-serif;
+  --font-roboto-p-smallest:  10px 'Roboto Condensed', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font: var(--font-roboto-p);
+}
+.navbar {
+  width: auto; 
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  /* justify-items: baseline; */
+  font: var(--font-roboto-h4);
+}
+.content {
+  /* height: auto; */
+  background-color: #f8f9fa;
+}
+.card {
+  width: 300px; 
+  height: 200px;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgba(43, 43, 43, 0.9)), url("https://images.heuritech.com/ef2fcdd2914128b835379322a9538579");
+  background-repeat: round;
+  position: relative;
+}
+.card-description {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-around;
+  column-gap: 128px;
+}
+.card-description__right {
+  font: var(--font-prata-h3); 
+  color: #fff;
+}
+.card-description__left {
+  font: var(--font-roboto-p-small); 
+  color: #fff;
+}
+.percentage {
+  color: #6ede8a;
+  font: var(--font-roboto-h3);
+  text-align: end; 
+  margin-top: 0;
+}
+.filter-side {
+  font: var(--font-roboto-h4);
+} 
+.logo-side {
+  font: var(--font-prata-h3)
+}
+.title {
+  font: var(--font-roboto-h3);
+}
+.title, .card-content {
+  padding: 15px 30px;
+}
+.button-btn-all {
+  width: 50px;
+  height: 35px;
+  border: 0px;
+  border-radius: 5px 0 0 5px;
+  background-color: #e09f3e;
+  color: #fff;
+  font: var(--font-roboto-h3);
+}
+.button-btn-fav {
+  width: 100px;
+  height: 35px;
+  border: 0px;
+  border-radius: 0 5px 5px 0;
+  background-color: #e0e3e6;
+  font: var(--font-roboto-h3);
+}
+select {
+  margin: 0 4px;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  font: var(--font-roboto-h4);
+}
