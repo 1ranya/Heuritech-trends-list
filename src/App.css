@@ -28,19 +28,26 @@ body {
   flex-direction: row;
   flex-wrap:nowrap;
   justify-content: space-between;
-  /* justify-items: baseline; */
   font: var(--font-roboto-h4);
 }
 .content {
-  /* height: auto; */
   background-color: #f8f9fa;
 }
+
+/* Card */
 .card {
-  width: 300px; 
-  height: 200px;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgba(43, 43, 43, 0.9)), url("https://images.heuritech.com/ef2fcdd2914128b835379322a9538579");
+  max-width: 353px; 
+  height: 367px;
   background-repeat: round;
   position: relative;
+  flex: 24%;
+  border: none !important
+}
+.card-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 .card-description {
   display: flex;
@@ -49,21 +56,27 @@ body {
   bottom: 0;
   width: 100%;
   justify-content: space-around;
-  column-gap: 128px;
 }
 .card-description__right {
-  font: var(--font-prata-h3); 
+  font: var(--font-prata-h4); 
   color: #fff;
+  width: 200px;
 }
 .card-description__left {
   font: var(--font-roboto-p-small); 
   color: #fff;
+  width: 100px;
 }
-.percentage {
+
+.growth{
   color: #6ede8a;
   font: var(--font-roboto-h3);
   text-align: end; 
   margin-top: 0;
+}
+.description {
+  text-align: end;
+  font: var(--font-roboto-h2);
 }
 .filter-side {
   font: var(--font-roboto-h4);
@@ -77,16 +90,77 @@ body {
 .title, .card-content {
   padding: 15px 30px;
 }
-.button-btn-all {
+select {
+  margin: 0 8px !important;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  font: var(--font-roboto-h4);
+}
+.sortBySelect {
+  width: 160px;
+}
+.active {
+  background-color: #e09f3e !important;
+  color: #fff;
+}
+.seeMore {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px 0;
+}
+.add {
+  text-align: right;
+}
+.seeMore__line {
+  border-top: 0.5px solid rgb(179, 179, 179);
+}
+
+/* Modal */
+.modal-title {
+  font: var(--font-prata-h3);
+}
+.modal-body {
+  grid-template-columns: 46% 24% 24%;
+  display: grid;
+  column-gap: 3%;
+  padding-bottom: 1%;
+}
+
+/* Button */
+.add__btn {
+  border: none;
+  margin: 16px 16px;
+  background-color: #fff;
+  width: 30px;
+  height: 35px;
+  border-radius: 5px;
+  font-weight: 800;
+  opacity: 1;
+  transition: opacity 0.3s
+}
+.seeMore__btn {
+  margin-top: -13px;
+  box-shadow: 0px -43px 50px 50px #fff;
+  z-index: 5;
+}
+.btn-seeMore {
+  border-radius: 14px;
+  background-color: #fff;
+  font: var(--font-roboto-h4)
+}
+#button-btn-all {
+  margin-left: 8px;
   width: 50px;
   height: 35px;
   border: 0px;
   border-radius: 5px 0 0 5px;
-  background-color: #e09f3e;
-  color: #fff;
+  background-color: #e0e3e6;
   font: var(--font-roboto-h3);
 }
-.button-btn-fav {
+#button-btn-fav {
+  margin-right: 8px;
   width: 100px;
   height: 35px;
   border: 0px;
@@ -94,10 +168,24 @@ body {
   background-color: #e0e3e6;
   font: var(--font-roboto-h3);
 }
-select {
-  margin: 0 4px;
-  width: 100px;
-  height: 35px;
-  border-radius: 5px;
-  font: var(--font-roboto-h4);
+
+/* Hover */
+.add__btn:hover {
+  opacity: 1;
+}
+
+/* Overwrite bootstrap */
+#tooltip-top > .tooltip-inner {
+  background-color: #fff !important;
+  color: #000 !important;
+  margin-left: 150px;
+}
+#tooltip-top > .tooltip-arrow {
+  opacity: 0;
+}
+
+.moodboard-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: none;
 }
